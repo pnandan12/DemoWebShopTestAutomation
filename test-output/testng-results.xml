@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-05-01T04:50:48Z" name="Default suite" finished-at="2021-05-01T04:51:41Z" duration-ms="52922">
+    <groups>
+    </groups>
+    <test started-at="2021-05-01T04:50:48Z" name="Default test" finished-at="2021-05-01T04:51:41Z" duration-ms="52922">
+      <class name="com.app.qa.testcases.LoginPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:20:48Z" name="setUp" finished-at="2021-05-01T10:21:03Z" duration-ms="15653" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validationOfLoginPageTest()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:03Z" name="validationOfLoginPageTest" finished-at="2021-05-01T10:21:04Z" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validationOfLoginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:04Z" name="tearDown" finished-at="2021-05-01T10:21:05Z" duration-ms="1551" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:05Z" name="setUp" finished-at="2021-05-01T10:21:20Z" duration-ms="15303" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="LogoDemositeImageTest()[pri:1, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:20Z" name="LogoDemositeImageTest" finished-at="2021-05-01T10:21:21Z" duration-ms="317" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- LogoDemositeImageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:21Z" name="tearDown" finished-at="2021-05-01T10:21:22Z" duration-ms="1204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:22Z" name="setUp" finished-at="2021-05-01T10:21:37Z" duration-ms="15257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginTest()[pri:2, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:37Z" name="loginTest" finished-at="2021-05-01T10:21:40Z" duration-ms="2382" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.app.qa.testcases.LoginPageTest@4816278d]" started-at="2021-05-01T10:21:40Z" name="tearDown" finished-at="2021-05-01T10:21:41Z" duration-ms="1122" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.app.qa.testcases.LoginPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

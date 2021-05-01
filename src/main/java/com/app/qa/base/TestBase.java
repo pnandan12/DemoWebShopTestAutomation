@@ -37,15 +37,15 @@ public class TestBase {
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
-		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\chromedriver.exe");	
+		if(browserName.equalsIgnoreCase("chrome")){
+			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\chromedriver_win32\\chromedriver.exe");	
 			driver = new ChromeDriver(); 
 		}
-		else if(browserName.equals("FF")){
+		else if(browserName.equalsIgnoreCase("FF")){
 			System.setProperty("webdriver.gecko.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\geckodriver.exe");	
 			driver = new FirefoxDriver(); 
 		}
-		else if(browserName.equals("edge")){
+		else if(browserName.equalsIgnoreCase("edge")){
 			System.setProperty("webdriver.edge.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\Edgedriver.exe");	
 			driver = new EdgeDriver(); 
 		}
@@ -57,7 +57,7 @@ public class TestBase {
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().implicitlyWait(TestUtils.Implicity_Wait, TimeUnit.SECONDS);
+		//driver.manage().timeouts().implicitlyWait(TestUtils.Implicity_Wait, TimeUnit.SECONDS);
 		driver.manage().timeouts().pageLoadTimeout(TestUtils.Page_Load_Timeout, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 		
