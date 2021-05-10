@@ -36,17 +36,18 @@ public class TestBase {
 	}
 	
 	public static void initialization(){
+//		browser initiation
 		String browserName = prop.getProperty("browser");
 		if(browserName.equalsIgnoreCase("chrome")){
-			System.setProperty("webdriver.chrome.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\chromedriver_win32\\chromedriver.exe");	
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeDriverPath"));	
 			driver = new ChromeDriver(); 
 		}
-		else if(browserName.equalsIgnoreCase("FF")){
-			System.setProperty("webdriver.gecko.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\geckodriver.exe");	
+		else if(browserName.equalsIgnoreCase("firefox")){
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("geckoDriverPath"));	
 			driver = new FirefoxDriver(); 
 		}
 		else if(browserName.equalsIgnoreCase("edge")){
-			System.setProperty("webdriver.edge.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\Edgedriver.exe");	
+			System.setProperty("webdriver.edge.driver", prop.getProperty("edgeDriverPath"));	
 			driver = new EdgeDriver(); 
 		}
 		//forhtml unit driver is use full forthe head less testing

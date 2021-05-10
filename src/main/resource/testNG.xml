@@ -3,12 +3,12 @@
 
 <suite name = "DemoWebShop Test suite">
 
-    <test name= "DemoWebShopTest">
+    <test name= "DemoWebShopTest" parallel="methods" thread-count="1" >
     
         <classes>
         
            <class name="com.app.qa.testcases.LoginPageTest"></class>
-            
+           <class name="com.app.qa.testcases.HomePageTest"></class>
         </classes>
         
     </test>

@@ -3,11 +3,16 @@ package com.app.qa.testcases;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.app.qa.base.TestBase;
-import com.app.qa.pages.LoginPage;
 import com.app.qa.pages.HomePage;
+import com.app.qa.pages.LoginPage;
+import com.app.qa.util.CustomListener;
+
+@Listeners(CustomListener.class)
+
 public class LoginPageTest extends TestBase {
 	LoginPage login;
 	HomePage homepg;
@@ -29,19 +34,22 @@ public class LoginPageTest extends TestBase {
 	}
 	@Test(priority=1)
 	public void LogoDemositeImageTest(){
-		boolean img=login.validateDemoSiteImage();
-		Assert.assertTrue(img);
-	
+			boolean img=login.validateDemoSiteImage();
+			Assert.assertTrue(img);
+		
 	}
 	@Test(priority=2)
 	public void loginTest(){
 	homepg=login.loginValidation(prop.getProperty("username"), prop.getProperty("password"));
-		
 	}
 	
 	@AfterMethod
 	public void tearDown() {
+		/*
+		 * if(ITestResult.FAILURE==result.getStatus()) { TestUtils.screenShot(); }
+		 */
 		driver.quit();
 	}
+	
 
 }

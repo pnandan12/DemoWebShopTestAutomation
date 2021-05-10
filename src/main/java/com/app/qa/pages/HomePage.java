@@ -11,6 +11,8 @@ import org.openqa.selenium.support.PageFactory;
 import com.app.qa.base.TestBase;
 
 public class HomePage extends TestBase {
+	@FindBy(xpath="//img[contains(@alt,'Tricentis Demo Web Shop')]")
+	WebElement imgDemoWebShopLOGO;
 	@FindBy(xpath = "//a[contains(text(),'praveenkumar51357@gmail.com')]")
 	WebElement accountName;
 	@FindBy(xpath = "//a[contains(@class,'ico-logout')]")
@@ -28,27 +30,38 @@ public class HomePage extends TestBase {
 	public HomePage() {
 		PageFactory.initElements(driver, this);
 	}
-
+	public boolean validateDemoSiteImage(){
+		return imgDemoWebShopLOGO.isDisplayed();
+	}
+	public String validateLoginPageTitle(){
+		return driver.getTitle();
+	}
 	public void clickOnTabComputersLink() {
 		Actions action = new Actions(driver);
 		action.moveToElement(tabComputers).build().perform();
 		linkDesktop.click();
 
 	}
+	
+	public void topRibboneAlltabs() {
+		List<WebElement> tbOptions=driver.findElements(By.xpath("//ul[@class='mob-top-menu']/li/a"));
+		for(WebElement ele:tbOptions) 
+			System.out.print("	|	"+ele.getText());
+	}
 
-	public void topRibboneForTabs(String tabName, String CheckoptionAll) {
+	public void topRibboneForTabs(String tabName) {
 		
-		if (CheckoptionAll == "OFF" && tabName != null && tabName.length() < 5) 
-				driver.findElement(By.xpath("//ul[@class='mob-top-menu']/li/a[contains(text(),'" + "tabName" + "')]"));	
+		if ( tabName != null && tabName.length() < 5) {
+		
+			WebElement elem= driver.findElement(By.xpath("//ul[@class='mob-top-menu']/li/a[contains(text(),'" + tabName + "')]"));
+			elem.isDisplayed();
+		}
 		else
 			System.out.println("Invalid Entry");
 		
-		if (CheckoptionAll == "ON" && tabName == null) {
-			List<WebElement> tbOptions=driver.findElements(By.xpath("//ul[@class='mob-top-menu']/li/a"));
-			for(WebElement ele:tbOptions) 
-				System.out.print("/t"+ele.getText());	
-		}else
-			System.out.println("Invalid Entry");
+
+				
+
 	}
 
 }
