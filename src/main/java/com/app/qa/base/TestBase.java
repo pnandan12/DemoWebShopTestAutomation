@@ -38,6 +38,7 @@ public class TestBase {
 	public static void initialization(){
 //		browser initiation
 		String browserName = prop.getProperty("browser");
+		System.out.println("Browser is :"+browserName);
 		if(browserName.equalsIgnoreCase("chrome")){
 			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromeDriverPath"));	
 			driver = new ChromeDriver(); 
@@ -55,6 +56,9 @@ public class TestBase {
 			System.setProperty("webdriver.edge.driver", "C:\\Users\\shyam\\java-selenium\\drivers\\Edgedriver.exe");	
 			driver = new HtmlUnitDriver(); 
 		}*/
+		else {
+			System.out.println("Please pass the browser value :" +browserName);
+		}
 		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
