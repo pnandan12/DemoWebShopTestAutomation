@@ -6,15 +6,13 @@ pipeline {
             steps {
               withMaven(maven:'MAVEN_HOME'){
               sh 'mvn clean compile'
-              echo 'Compiling..'
               }
             }
         }
         stage('Testing Stage') {
             steps {
                withMaven(maven:'MAVEN_HOME'){
-              sh 'mvn test'
-                echo 'Testing..'
+                sh 'mvn test'
                }
             }
         }
@@ -22,7 +20,6 @@ pipeline {
             steps {
                withMaven(maven:'MAVEN_HOME'){
                 sh 'mvn deploy'
-                echo 'Deploying....'
                }
             }
         }
