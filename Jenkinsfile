@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Compile Stage') {
             steps {
-              // withMaven(maven:'MAVEN_HOME'){
+               withMaven(maven:'MAVEN_HOME'){
                 //sh 'mvn deploy'
                 bat 'mvn compile'
                }
